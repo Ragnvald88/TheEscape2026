@@ -82,13 +82,13 @@ export const Countdown = ({ targetDate, className }: CountdownProps) => {
             ref={(el) => {
               numbersRef.current[index] = el
             }}
-            className="relative"
+            className="relative bg-black rounded-lg p-4 md:p-6 min-w-[80px] md:min-w-[100px]"
           >
-            <div className="text-4xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg">
+            <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tabular-nums">
               {String(unit.value).padStart(2, '0')}
             </div>
           </div>
-          <span className="text-sm md:text-base lg:text-lg text-white/80 mt-2 uppercase tracking-wider">
+          <span className="text-xs md:text-sm text-gray-600 mt-2 uppercase tracking-wider font-medium">
             {unit.label}
           </span>
         </div>
