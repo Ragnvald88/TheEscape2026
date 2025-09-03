@@ -2,9 +2,10 @@
 
 import { useEffect, useRef } from 'react'
 import { Countdown } from './Countdown'
+import { MapBackground } from './MapBackground'
 import gsap from 'gsap'
 import { cn } from '@/lib/utils'
-import { Calendar, Users, MapPin, Clock } from 'lucide-react'
+import { Calendar, MapPin, Dice6, Trophy } from 'lucide-react'
 
 interface HeroSectionProps {
   className?: string
@@ -36,7 +37,7 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
         '-=0.5'
       )
       .fromTo(
-        '.info-card',
+        '.timeline-card',
         { y: 20, opacity: 0 },
         { 
           y: 0, 
@@ -56,16 +57,17 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
       ref={heroRef}
       className={cn(
         'relative min-h-screen flex flex-col items-center justify-center px-4 py-12',
-        'bg-white',
+        'bg-white overflow-hidden',
         className
       )}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white" />
+      {/* Map Background */}
+      <MapBackground />
       
-      <div className="relative z-10 text-center max-w-6xl mx-auto">
+      <div className="relative z-20 text-center max-w-6xl mx-auto">
         <div className="mb-6">
           <span className="inline-block px-4 py-2 bg-black text-white text-sm font-medium rounded-full">
-            JUNE 2026 EUROPEAN ADVENTURE
+            DUBLIN → GENUA → SAN SIRO → ???
           </span>
         </div>
         
@@ -80,13 +82,13 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
           ref={subtitleRef}
           className="text-xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto"
         >
-          After our legendary trips to Budapest, Rome, and Barcelona, 
-          it's time to choose our next destination together.
+          After Dublin's pubs, Genua's coastline, and The Boss in Milan,
+          it's time to choose where we create our next legendary memories.
         </p>
         
-        <div className="countdown-container mb-8">
+        <div className="countdown-container mb-8 bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-100">
           <p className="text-lg text-gray-600 mb-2 font-medium">
-            VOTING OPENS IN
+            PLATFORM OPENS IN
           </p>
           <Countdown 
             targetDate={targetDate} 
@@ -94,39 +96,38 @@ export const HeroSection = ({ className }: HeroSectionProps) => {
           />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16">
-          <div className="info-card bg-gray-50 rounded-lg p-6 border border-gray-200">
-            <Calendar className="w-8 h-8 mb-3 mx-auto" />
-            <h3 className="font-bold text-lg mb-2">October 1st, 2025</h3>
-            <p className="text-gray-600 text-sm">
-              Voting begins. Each friend nominates their top destinations.
+        <div className="grid md:grid-cols-4 gap-4 max-w-5xl mx-auto mt-16">
+          <div className="timeline-card bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
+            <Calendar className="w-6 h-6 mb-2 mx-auto" />
+            <h3 className="font-bold text-sm mb-1">Oct 1-7</h3>
+            <p className="text-gray-600 text-xs">
+              Date voting opens
             </p>
           </div>
           
-          <div className="info-card bg-gray-50 rounded-lg p-6 border border-gray-200">
-            <Users className="w-8 h-8 mb-3 mx-auto" />
-            <h3 className="font-bold text-lg mb-2">5 Friends, 5 Votes</h3>
-            <p className="text-gray-600 text-sm">
-              Democratic decision. Everyone's voice matters equally.
+          <div className="timeline-card bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
+            <Dice6 className="w-6 h-6 mb-2 mx-auto" />
+            <h3 className="font-bold text-sm mb-1">Oct 8 - Nov 4</h3>
+            <p className="text-gray-600 text-xs">
+              Destination game: 4 weeks of interactive voting
             </p>
           </div>
           
-          <div className="info-card bg-gray-50 rounded-lg p-6 border border-gray-200">
-            <MapPin className="w-8 h-8 mb-3 mx-auto" />
-            <h3 className="font-bold text-lg mb-2">New Destination</h3>
-            <p className="text-gray-600 text-sm">
-              Exploring uncharted territories. Creating new memories.
+          <div className="timeline-card bg-white/95 backdrop-blur-sm rounded-lg p-4 border border-gray-200 shadow-lg">
+            <Trophy className="w-6 h-6 mb-2 mx-auto" />
+            <h3 className="font-bold text-sm mb-1">Nov 4</h3>
+            <p className="text-gray-600 text-xs">
+              Date & destination announced
             </p>
           </div>
-        </div>
-
-        <div className="mt-12 p-6 bg-black text-white rounded-lg max-w-2xl mx-auto">
-          <Clock className="w-6 h-6 mb-3 mx-auto opacity-80" />
-          <p className="text-lg font-medium mb-2">What Happens on October 1st?</p>
-          <p className="text-gray-300 text-sm">
-            The voting platform launches. Log in with your account, browse potential destinations, 
-            cast your votes, and help decide where we'll create our next unforgettable memories.
-          </p>
+          
+          <div className="timeline-card bg-black text-white rounded-lg p-4">
+            <MapPin className="w-6 h-6 mb-2 mx-auto" />
+            <h3 className="font-bold text-sm mb-1">June 2026</h3>
+            <p className="text-gray-300 text-xs">
+              The Escape begins
+            </p>
+          </div>
         </div>
       </div>
     </div>
