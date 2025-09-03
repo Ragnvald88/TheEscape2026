@@ -1,27 +1,27 @@
 'use client'
 
-import { ArrowRight, Target, Vote, Plane, Trophy } from 'lucide-react'
+import { ArrowRight, Calendar, Dice6, Trophy, Plane } from 'lucide-react'
 
 export const AboutSection = () => {
   const steps = [
     {
-      icon: <Target className="w-6 h-6" />,
-      title: 'October 1st - Platform Opens',
-      description: 'The voting platform launches. Each friend logs in with their account.',
+      icon: <Calendar className="w-6 h-6" />,
+      title: 'Oct 1-7: Date Voting',
+      description: 'The platform opens. Vote for your preferred travel dates in June 2026.',
     },
     {
-      icon: <Vote className="w-6 h-6" />,
-      title: 'October - November - Voting Period',
-      description: 'Browse destinations, discuss options, cast your votes. Democracy in action.',
+      icon: <Dice6 className="w-6 h-6" />,
+      title: 'Oct 8 - Nov 4: Destination Game',
+      description: '4 weeks of interactive voting. Destinations compete in elimination rounds.',
     },
     {
       icon: <Trophy className="w-6 h-6" />,
-      title: 'December 1st - Destination Revealed',
-      description: 'The winning destination is announced. Planning begins immediately.',
+      title: 'Nov 4: Final Reveal',
+      description: 'The winning date and destination are announced. Bookings begin immediately.',
     },
     {
       icon: <Plane className="w-6 h-6" />,
-      title: 'June 2026 - The Escape',
+      title: 'June 2026: The Escape',
       description: 'We embark on our next unforgettable adventure together.',
     },
   ]
@@ -31,11 +31,11 @@ export const AboutSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-            How It Works
+            The Voting Process
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A democratic process to choose our next adventure. Every vote counts, 
-            every opinion matters, and the majority decides where we create our next memories.
+            Two phases of democratic decision-making: First we choose when, then we choose where.
+            Every friend has equal power in shaping our 2026 adventure.
           </p>
         </div>
 
@@ -55,52 +55,59 @@ export const AboutSection = () => {
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
-          <h3 className="text-3xl font-bold mb-8 text-center">Why This Platform?</h3>
+          <h3 className="text-3xl font-bold mb-8 text-center">The Destination Game</h3>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="text-xl font-bold mb-3">The Problem</h4>
+              <h4 className="text-xl font-bold mb-3">How It Works</h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
-                  <span className="text-black">•</span>
-                  Group chats get messy with destination ideas
+                  <span className="text-black font-bold">Week 1:</span>
+                  Initial nominations - everyone suggests destinations
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-black">•</span>
-                  Hard to track who wants to go where
+                  <span className="text-black font-bold">Week 2:</span>
+                  Quarter-finals - top 8 destinations compete
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-black">•</span>
-                  Decisions drag on without clear deadlines
+                  <span className="text-black font-bold">Week 3:</span>
+                  Semi-finals - narrowed down to final 4
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-black">•</span>
-                  Some voices get lost in the discussion
+                  <span className="text-black font-bold">Week 4:</span>
+                  Grand finale - the winner is decided
                 </li>
               </ul>
             </div>
             
             <div>
-              <h4 className="text-xl font-bold mb-3">Our Solution</h4>
+              <h4 className="text-xl font-bold mb-3">Interactive Elements</h4>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  Organized voting platform with clear options
+                  Live voting rounds with real-time results
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  Visual destination galleries and information
+                  Destination profiles with photos and highlights
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  Fixed timeline with definitive decision date
+                  Head-to-head battles between cities
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500">✓</span>
-                  Equal voting power for all 5 friends
+                  Discussion forum for making your case
                 </li>
               </ul>
             </div>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-sm text-gray-500">
+              From pubs to beaches, from mountains to music festivals - 
+              where will The Escape 2026 take us?
+            </p>
           </div>
         </div>
       </div>
