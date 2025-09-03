@@ -42,3 +42,36 @@
  GET / 200 in 53ms
  GET /favicon.ico?favicon.0b3bf435.ico 200 in 222ms
  GET / 200 in 72ms
+ ⨯ ./src/components/sections/MapSection.tsx
+Module not found: Can't resolve './Map'
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/MapSection.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ⨯ ./src/components/sections/MapSection.tsx:7:34
+Module not found: Can't resolve './Map'
+[0m [90m  5 |[39m
+ [90m  6 |[39m [90m// Dynamically import the Map component with no SSR[39m
+[31m[1m>[22m[39m[90m  7 |[39m [36mconst[39m [33mDynamicMap[39m [33m=[39m dynamic(() [33m=>[39m [36mimport[39m([32m'./Map'[39m)[33m,[39m {
+ [90m    |[39m                                  [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m  8 |[39m   ssr[33m:[39m [36mfalse[39m[33m,[39m
+ [90m  9 |[39m   loading[33m:[39m () [33m=>[39m (
+ [90m 10 |[39m     [33m<[39m[33mdiv[39m className[33m=[39m[32m"h-[500px] w-full bg-gray-100 flex items-center justify-center"[39m[33m>[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/sections/MapSection.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+ ✓ Compiled in 33ms
