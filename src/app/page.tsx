@@ -1,21 +1,23 @@
-import { HeroSection } from '@/components/features/HeroSection'
-import { AboutSection } from '@/components/features/AboutSection'
-import { MemoriesSection } from '@/components/features/MemoriesSection'
-import { AccountSection } from '@/components/features/AccountSection'
+import HeroSection from '@/components/sections/HeroSection'
+import TimelineSection from '@/components/sections/TimelineSection'
+import FriendsSection from '@/components/sections/FriendsSection'
+import MapSection from '@/components/sections/MapSection'
+import MemoriesSection from '@/components/sections/MemoriesSection'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <HeroSection />
-      <AboutSection />
+      <TimelineSection />
+      <FriendsSection />
+      <MapSection />
       <MemoriesSection />
-      <AccountSection />
       
-      <footer className="bg-black text-white py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-gray-400 mb-2">The Escape 2026</p>
-          <p className="text-sm text-gray-500">
-            An exclusive voting platform for 5 friends planning their next adventure
+      <footer className="bg-black text-white py-12 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl font-bold mb-2">The Escape 2026</h3>
+          <p className="text-gray-400 text-sm">
+            An exclusive adventure for Ronald, Yoram, Roel, Bram & Andre
           </p>
         </div>
       </footer>
