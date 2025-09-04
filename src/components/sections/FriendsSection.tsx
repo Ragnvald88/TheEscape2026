@@ -63,7 +63,7 @@ export default function FriendsSection() {
                   <div className="relative">
                     <img 
                       src={friend.imageUrl} 
-                      alt={friend.name}
+                      alt={`${friend.name} - ${friend.role}, ${friend.subtitle}`}
                       className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full object-cover shadow-lg transform group-hover:scale-110 transition-all duration-300 border-4 border-white"
                     />
                   </div>

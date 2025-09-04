@@ -129,7 +129,11 @@ export default function HeroSection() {
 
         {/* CTA */}
         <div className="space-y-4">
-          <button onClick={handleJoinClick} className="btn-primary">
+          <button 
+            onClick={handleJoinClick} 
+            className="btn-primary focus:outline-none focus:ring-4 focus:ring-black/20 focus:ring-offset-2"
+            aria-label="Scroll naar account sectie om te registreren"
+          >
             Doe Mee Aan Het Avontuur
           </button>
           <p className="text-sm text-gray-500">
