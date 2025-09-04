@@ -65,13 +65,42 @@ export default function AccountSection() {
         console.error('Registration error:', err)
       }
     } else {
-      // Login logic (not implemented yet)
+      // Login logic
       if (!email || !password) {
         setError('Vul je email en wachtwoord in')
         return
       }
       
-      setError('Login komt binnenkort beschikbaar!')
+      try {
+        const response = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            password
+          })
+        })
+
+        const data = await response.json()
+
+        if (!response.ok) {
+          setError(data.error || 'Inloggen mislukt')
+          return
+        }
+
+        setIsSubmitted(true)
+        
+        // Redirect to dashboard after 2 seconds
+        setTimeout(() => {
+          window.location.href = '/dashboard'
+        }, 2000)
+
+      } catch (err) {
+        setError('Er ging iets mis. Probeer het later opnieuw.')
+        console.error('Login error:', err)
+      }
     }
   }
 
@@ -161,9 +190,9 @@ export default function AccountSection() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         aria-label="Selecteer je naam"
-                        className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none appearance-none cursor-pointer"
+                        className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-black/20 appearance-none cursor-pointer"
                       >
-                        <option value="">Selecteer je naam</option>
+                        <option value="" disabled>Kies je naam...</option>
                         {eligibleFriends.map(friend => (
                           <option key={friend} value={friend}>{friend}</option>
                         ))}
@@ -183,9 +212,9 @@ export default function AccountSection() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="jouw@email.nl"
+                      placeholder=""
                       aria-label="E-mailadres"
-                      className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none"
+                      className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-black/20 placeholder-gray-400"
                     />
                   </div>
                 </div>
@@ -201,24 +230,29 @@ export default function AccountSection() {
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
+                      placeholder=""
                       aria-label="Wachtwoord"
-                      className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none"
+                      className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-black/20 placeholder-gray-400"
                     />
                   </div>
                 </div>
                 
                 {error && (
-                  <div className="text-red-400 text-sm bg-red-900/20 p-3 rounded-lg">
+                  <div className="form-error text-red-400 text-sm bg-red-900/20 p-3 rounded-lg" data-testid="form-error" role="alert">
                     {error}
                   </div>
                 )}
                 
                 <button
                   type="submit"
-                  className="w-full bg-white text-black py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
+                  className="w-full bg-white text-black py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
                 >
-                  {mode === 'register' ? 'Account Aanmaken' : 'Inloggen'}
+                  <span className="hidden sm:inline">
+                    {mode === 'register' ? 'Account Aanmaken' : 'Inloggen'}
+                  </span>
+                  <span className="sm:hidden">
+                    {mode === 'register' ? 'Aanmelden' : 'Inloggen'}
+                  </span>
                 </button>
                 
                 <p className="text-xs text-gray-400 text-center">
@@ -237,14 +271,19 @@ export default function AccountSection() {
                 <p className="text-gray-400 mb-3">
                   {mode === 'register' 
                     ? "Check je email voor de verificatie link!"
-                    : 'Doorverwijzen naar je dashboard...'
+                    : 'Je wordt doorgestuurd naar het dashboard...'
                   }
                 </p>
-                {mode === 'register' && (
+                {mode === 'register' ? (
                   <div className="text-xs text-gray-500 space-y-1">
                     <p>📧 Verificatie email verzonden</p>
-                    <p>📬 Ronald krijgt een notificatie op ronaldhoogenberg@hotmail.com</p>
+                    <p>📬 Ronald krijgt een notificatie</p>
                     <p>✅ Je bent klaar voor 1 oktober!</p>
+                  </div>
+                ) : (
+                  <div className="text-xs text-gray-500 space-y-1">
+                    <p>🚀 Welkom terug!</p>
+                    <p>📊 Dashboard wordt geladen...</p>
                   </div>
                 )}
               </div>
