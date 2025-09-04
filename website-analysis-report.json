@@ -1,0 +1,528 @@
+{
+  "screenshots": [
+    "mobile-fullpage.png",
+    "mobile-above-fold.png",
+    "mobile-mid-scroll.png",
+    "mobile-bottom.png",
+    "tablet-fullpage.png",
+    "tablet-above-fold.png",
+    "tablet-mid-scroll.png",
+    "tablet-bottom.png",
+    "desktop-fullpage.png",
+    "desktop-above-fold.png",
+    "desktop-mid-scroll.png",
+    "desktop-bottom.png"
+  ],
+  "issues": [
+    "Found 1 placeholder text instances"
+  ],
+  "performance": {
+    "mobile": {
+      "loadTime": 1089,
+      "domContentLoaded": 0.09999999776482582,
+      "loadComplete": 0,
+      "totalElements": 564,
+      "totalImages": 9,
+      "totalScripts": 44,
+      "totalStylesheets": 2,
+      "timestamp": "2025-09-04T10:37:13.716Z"
+    },
+    "tablet": {
+      "loadTime": 970,
+      "domContentLoaded": 0,
+      "loadComplete": 0,
+      "totalElements": 564,
+      "totalImages": 9,
+      "totalScripts": 44,
+      "totalStylesheets": 2,
+      "timestamp": "2025-09-04T10:37:20.265Z"
+    },
+    "desktop": {
+      "loadTime": 1044,
+      "domContentLoaded": 0,
+      "loadComplete": 0,
+      "totalElements": 570,
+      "totalImages": 15,
+      "totalScripts": 44,
+      "totalStylesheets": 2,
+      "timestamp": "2025-09-04T10:37:27.037Z"
+    }
+  },
+  "accessibility": [
+    "mobile: 9 images missing meaningful alt text",
+    "mobile: 3 form inputs missing proper labels",
+    "mobile: Potential low contrast text detected (53 elements - needs manual review)",
+    "tablet: 9 images missing meaningful alt text",
+    "tablet: 3 form inputs missing proper labels",
+    "tablet: Potential low contrast text detected (53 elements - needs manual review)",
+    "desktop: 15 images missing meaningful alt text",
+    "desktop: 3 form inputs missing proper labels",
+    "desktop: Potential low contrast text detected (53 elements - needs manual review)"
+  ],
+  "content": {
+    "totalLength": 25688,
+    "dutchElements": 9,
+    "headings": [
+      {
+        "level": "H1",
+        "text": "De Ontsnapping 2026",
+        "hasId": false
+      },
+      {
+        "level": "H2",
+        "text": "De Reis Voor Ons",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Datum Selectie",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Bestemming Battle",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "De Grote Onthulling",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "De Ontsnapping",
+        "hasId": false
+      },
+      {
+        "level": "H2",
+        "text": "De Bemanning",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Ronald",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Yoram",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Roel",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Bram",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "André",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Gelijke Stemkracht",
+        "hasId": false
+      },
+      {
+        "level": "H2",
+        "text": "Waar Nu Heen?",
+        "hasId": false
+      },
+      {
+        "level": "H2",
+        "text": "Het Verhaal Tot Nu Toe",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Dublin",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Genua",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "San Siro Milaan",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Foto & Video Galerij",
+        "hasId": false
+      },
+      {
+        "level": "H2",
+        "text": "Legendes & Verhalen",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "To The Beaarr!",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Van Hater tot Believer",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "De Prato Held",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Villa in Como",
+        "hasId": false
+      },
+      {
+        "level": "H2",
+        "text": "Doe Mee Aan Het Avontuur",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "De Exclusieve Vijf",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "Maak Je Account",
+        "hasId": false
+      },
+      {
+        "level": "H3",
+        "text": "De Ontsnapping 2026",
+        "hasId": false
+      }
+    ],
+    "components": {
+      "countdown": true,
+      "map": true,
+      "navigation": false,
+      "hero": true,
+      "footer": true
+    }
+  },
+  "interactions": {
+    "mobile": {
+      "totalElements": 37,
+      "visibleElements": 37,
+      "elements": [
+        {
+          "index": 0,
+          "tag": "BUTTON",
+          "type": "submit",
+          "text": "Doe Mee Aan Het Avontuur",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "btn-primary"
+        },
+        {
+          "index": 1,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 2,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 3,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 4,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 5,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 6,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 7,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 8,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 9,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        }
+      ]
+    },
+    "tablet": {
+      "totalElements": 37,
+      "visibleElements": 37,
+      "elements": [
+        {
+          "index": 0,
+          "tag": "BUTTON",
+          "type": "submit",
+          "text": "Doe Mee Aan Het Avontuur",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "btn-primary"
+        },
+        {
+          "index": 1,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 2,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 3,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 4,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 5,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 6,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 7,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 8,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 9,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        }
+      ]
+    },
+    "desktop": {
+      "totalElements": 37,
+      "visibleElements": 37,
+      "elements": [
+        {
+          "index": 0,
+          "tag": "BUTTON",
+          "type": "submit",
+          "text": "Doe Mee Aan Het Avontuur",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "btn-primary"
+        },
+        {
+          "index": 1,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 2,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 3,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 4,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 5,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 6,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 7,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 8,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        },
+        {
+          "index": 9,
+          "tag": "DIV",
+          "type": "N/A",
+          "text": "",
+          "hasHref": false,
+          "isVisible": true,
+          "classes": "leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive"
+        }
+      ]
+    }
+  },
+  "visual": {},
+  "responsive": {
+    "mobile": [
+      "Potential element overlap detected (42 instances)"
+    ],
+    "tablet": [
+      "Potential element overlap detected (43 instances)"
+    ],
+    "desktop": [
+      "Potential element overlap detected (45 instances)"
+    ]
+  },
+  "summary": {
+    "totalScreenshots": 12,
+    "totalIssues": 1,
+    "accessibilityIssues": 9,
+    "analysisDate": "2025-09-04T10:37:29.826Z",
+    "viewportsTested": [
+      "mobile",
+      "tablet",
+      "desktop"
+    ]
+  }
+}

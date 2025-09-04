@@ -123,14 +123,16 @@ export default function AccountSection() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 {mode === 'register' && (
                   <div>
-                    <label className="block text-sm font-medium mb-2">
+                    <label htmlFor="name-select" className="block text-sm font-medium mb-2">
                       Je Naam
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                       <select
+                        id="name-select"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        aria-label="Selecteer je naam"
                         className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none appearance-none cursor-pointer"
                       >
                         <option value="">Selecteer je naam</option>
@@ -143,32 +145,36 @@ export default function AccountSection() {
                 )}
                 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label htmlFor="email-input" className="block text-sm font-medium mb-2">
                     E-mailadres
                   </label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
+                      id="email-input"
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="jouw@email.nl"
+                      aria-label="E-mailadres"
                       className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">
+                  <label htmlFor="password-input" className="block text-sm font-medium mb-2">
                     Wachtwoord
                   </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                     <input
+                      id="password-input"
                       type="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       placeholder="••••••••"
+                      aria-label="Wachtwoord"
                       className="w-full pl-10 pr-4 py-3 bg-white text-black rounded-lg border border-gray-300 focus:border-gray-500 focus:outline-none"
                     />
                   </div>
