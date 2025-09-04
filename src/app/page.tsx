@@ -3,6 +3,7 @@ import TimelineSection from '@/components/sections/TimelineSection'
 import FriendsSection from '@/components/sections/FriendsSection'
 import MapSection from '@/components/sections/MapSection'
 import MemoriesSection from '@/components/sections/MemoriesSection'
+import StoriesSection from '@/components/sections/StoriesSection'
 import AccountSection from '@/components/sections/AccountSection'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <FriendsSection />
       <MapSection />
       <MemoriesSection />
+      <StoriesSection />
       <AccountSection />
       
       <footer className="bg-black text-white py-12 px-6">

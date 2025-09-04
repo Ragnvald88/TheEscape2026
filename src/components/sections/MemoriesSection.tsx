@@ -8,23 +8,29 @@ export default function MemoriesSection() {
       year: '2023',
       title: 'Dublin',
       type: 'city',
-      highlights: ['Temple Bar', 'Guinness Storehouse', 'Irish Whiskey'],
-      quote: 'Where it all began'
+      highlights: ['Croke Park Concert', 'Guinness Museum 🍺', "Roel's droom: 'To the beaarr!'"],
+      quote: 'The Boss in Dublin',
+      detail: 'Bruce Springsteen + Grote Beer @ Guinness',
+      story: "Roel's grootste droom kwam uit in het Guinness Museum. 'To the beaarr!' werd de kreet van de reis."
     },
     {
       year: '2024',
       title: 'Genua',
       type: 'city',
-      highlights: ['Cinque Terre', 'Focaccia', 'Porto Antico'],
-      quote: 'Italian coastal vibes'
+      highlights: ['Schitterende stad', 'Concert geannuleerd', "Bram's voorspelling"],
+      quote: 'Plan B werd goud',
+      detail: 'Bram verheugd: geen Bruce!',
+      story: 'Bram was blij dat hij niet naar Springsteen hoefde en voorspelde dat Bruce "binnen 2 maanden dood" zou zijn. Die voorspelling kwam niet uit...'
     },
     {
       year: '2025',
-      title: 'Bruce Springsteen',
-      subtitle: 'San Siro, Milan',
+      title: 'San Siro Milaan',
+      subtitle: 'Villa in Como!',
       type: 'concert',
-      highlights: ['Born to Run', 'The Boss', '65,000 fans'],
-      quote: 'Legendary night'
+      highlights: ['Laatste minuut Prato A tickets', 'Villa met zwembad', "Bram: 'Allervetste concert ooit!'"],
+      quote: 'Van hater naar believer',
+      detail: 'Ronald scoorde 4x Prato A',
+      story: "Bram's complete omkeer: 'Dit was het allervetste concert ooit!' Villa in Como met zwembad als uitvalsbasis."
     }
   ]
 
@@ -33,10 +39,10 @@ export default function MemoriesSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display font-bold text-gray-900 mb-4">
-            The Story So Far
+            Het Verhaal Tot Nu Toe
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Three years, three adventures, countless memories
+            Drie jaar, drie avonturen, ontelbare herinneringen
           </p>
         </div>
 
@@ -66,6 +72,20 @@ export default function MemoriesSection() {
                   </p>
                 ))}
               </div>
+              
+              {memory.detail && (
+                <p className="text-xs text-gray-400 mt-3 font-medium">
+                  {memory.detail}
+                </p>
+              )}
+              
+              {memory.story && (
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-xs text-gray-600 italic">
+                    {memory.story}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -73,18 +93,18 @@ export default function MemoriesSection() {
         {/* Coming Soon */}
         <div className="bg-black text-white rounded-2xl p-12 text-center">
           <Lock className="w-12 h-12 mx-auto mb-4 opacity-50" />
-          <h3 className="text-2xl font-bold mb-2">Photo & Video Gallery</h3>
+          <h3 className="text-2xl font-bold mb-2">Foto & Video Galerij</h3>
           <p className="text-gray-400 mb-6">
-            Coming Soon • Exclusive access for the crew only
+            Binnenkort • Exclusieve toegang voor de bemanning
           </p>
           <div className="flex justify-center gap-4 text-sm text-gray-500">
             <span className="flex items-center gap-2">
               <ImageIcon className="w-4 h-4" />
-              100+ Photos
+              100+ Foto's
             </span>
             <span className="flex items-center gap-2">
               <Music className="w-4 h-4" />
-              Epic Moments
+              Epische Momenten
             </span>
           </div>
         </div>

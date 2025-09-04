@@ -1,14 +1,42 @@
 'use client'
 
-import { User } from 'lucide-react'
-
 export default function FriendsSection() {
   const friends = [
-    { name: 'Ronald', role: 'De Held', subtitle: 'Prato tickets fixer', color: 'from-blue-400 to-blue-600' },
-    { name: 'Yoram', role: 'De Kenner', subtitle: 'Cultuur specialist', color: 'from-green-400 to-green-600' },
-    { name: 'Roel', role: 'De Grote Beer', subtitle: 'Feestbeest', color: 'from-purple-400 to-purple-600' },
-    { name: 'Bram', role: 'De Acid Cowboy', subtitle: 'Avonturier', color: 'from-orange-400 to-orange-600' },
-    { name: 'André', role: 'De Speelse Papa', subtitle: 'Groepsverbinder', color: 'from-red-400 to-red-600' }
+    { 
+      name: 'Ronald', 
+      role: 'De Held', 
+      subtitle: 'Prato tickets fixer', 
+      color: 'from-blue-400 to-blue-600',
+      imageUrl: null // Placeholder voor toekomstige foto
+    },
+    { 
+      name: 'Yoram', 
+      role: 'De Kenner', 
+      subtitle: 'Cultuur specialist', 
+      color: 'from-green-400 to-green-600',
+      imageUrl: null // Placeholder voor toekomstige foto
+    },
+    { 
+      name: 'Roel', 
+      role: 'De Grote Beer', 
+      subtitle: "'To the beaarr!'", 
+      color: 'from-purple-400 to-purple-600',
+      imageUrl: null // Placeholder voor toekomstige foto
+    },
+    { 
+      name: 'Bram', 
+      role: 'De Acid Cowboy', 
+      subtitle: 'Van Bruce-hater tot superfan', 
+      color: 'from-orange-400 to-orange-600',
+      imageUrl: null // Placeholder voor toekomstige foto
+    },
+    { 
+      name: 'André', 
+      role: 'De Speelse Papa', 
+      subtitle: 'Groepsverbinder', 
+      color: 'from-red-400 to-red-600',
+      imageUrl: null // Placeholder voor toekomstige foto
+    }
   ]
 
   return (
@@ -30,9 +58,23 @@ export default function FriendsSection() {
               className="text-center group cursor-pointer"
             >
               <div className="relative mb-4">
-                <div className={`w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full bg-gradient-to-br ${friend.color} flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300`}>
-                  <User className="w-12 h-12 md:w-16 md:h-16 text-white" />
-                </div>
+                {friend.imageUrl ? (
+                  // Als er een foto is, toon deze
+                  <div className="relative">
+                    <img 
+                      src={friend.imageUrl} 
+                      alt={friend.name}
+                      className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full object-cover shadow-lg transform group-hover:scale-110 transition-all duration-300 border-4 border-white"
+                    />
+                  </div>
+                ) : (
+                  // Anders toon de gekleurde avatar met initiaal
+                  <div className={`w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full bg-gradient-to-br ${friend.color} flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-all duration-300`}>
+                    <span className="text-3xl md:text-4xl font-bold text-white">
+                      {friend.name[0]}
+                    </span>
+                  </div>
+                )}
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md">
                   <span className="text-sm font-bold">{index + 1}</span>
                 </div>

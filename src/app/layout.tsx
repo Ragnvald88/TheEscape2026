@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Escape 2026 - European Adventure",
-  description: "5 friends voting on European destinations for June 2026 holiday. Join us on our epic journey!",
-  keywords: ["travel", "europe", "vacation", "friends", "2026", "adventure"],
+  title: "De Ontsnapping 2026 - Europees Avontuur",
+  description: "5 vrienden stemmen op Europese bestemmingen voor juni 2026 vakantie. Van Springsteen concerten naar nieuwe horizonten!",
+  keywords: ["reizen", "europa", "vakantie", "vrienden", "2026", "avontuur", "nederland", "springsteen"],
   openGraph: {
-    title: "The Escape 2026",
-    description: "5 friends, 1 epic European journey, unlimited memories",
+    title: "De Ontsnapping 2026",
+    description: "5 vrienden, 1 epische Europese reis, ontelbare herinneringen",
     type: "website",
     url: "https://theescape2026.nl",
   },
@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="nl">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
