@@ -57,6 +57,13 @@ export default function HeroSection() {
     return () => ctx.revert()
   }, [])
 
+  const handleJoinClick = () => {
+    const accountSection = document.getElementById('account-section')
+    if (accountSection) {
+      accountSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section ref={sectionRef} className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
       {/* Background pattern */}
@@ -72,38 +79,41 @@ export default function HeroSection() {
         {/* Journey Progress */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium">
-            <span>Dublin 2023</span>
+            <span className="text-green-400">Dublin 2023</span>
+            <span className="text-xs">🎸 Springsteen</span>
             <span className="opacity-40">→</span>
-            <span>Genua 2024</span>
+            <span className="text-blue-400">Genua 2024</span>
+            <span className="text-xs">❌ Geannuleerd</span>
             <span className="opacity-40">→</span>
-            <span>San Siro 2025</span>
+            <span className="text-red-400">San Siro 2025</span>
+            <span className="text-xs">🎸 Finale</span>
             <span className="opacity-40">→</span>
-            <span className="text-yellow-400">???</span>
+            <span className="text-yellow-400 font-bold">2026 ???</span>
           </div>
         </div>
 
         {/* Main Title */}
         <h1 className="hero-title text-hero font-black text-gray-900 mb-6">
-          The Escape 2026
+          De Ontsnapping 2026
         </h1>
 
         {/* Subtitle */}
         <p className="hero-subtitle text-xl md:text-2xl text-gray-600 mb-16 max-w-3xl mx-auto">
-          Five friends. One epic destination. The voting begins soon.
+          Vijf vrienden. Één epische bestemming. Het stemmen begint binnenkort.
         </p>
 
         {/* Countdown */}
         <div className="mb-16">
           <p className="text-sm uppercase tracking-widest text-gray-500 mb-8 font-semibold">
-            Platform Opens In
+            Platform Opent Over
           </p>
           
           <div className="flex justify-center gap-4 md:gap-6">
             {[
-              { value: timeLeft.days, label: 'Days' },
-              { value: timeLeft.hours, label: 'Hours' },
-              { value: timeLeft.minutes, label: 'Minutes' },
-              { value: timeLeft.seconds, label: 'Seconds' }
+              { value: timeLeft.days, label: 'Dagen' },
+              { value: timeLeft.hours, label: 'Uren' },
+              { value: timeLeft.minutes, label: 'Minuten' },
+              { value: timeLeft.seconds, label: 'Seconden' }
             ].map(({ value, label }) => (
               <div key={label} className="countdown-box">
                 <div className="bg-black text-white rounded-2xl p-4 md:p-6 min-w-[80px] md:min-w-[100px]">
@@ -119,11 +129,11 @@ export default function HeroSection() {
 
         {/* CTA */}
         <div className="space-y-4">
-          <button className="btn-primary">
-            Join the Adventure
+          <button onClick={handleJoinClick} className="btn-primary">
+            Doe Mee Aan Het Avontuur
           </button>
           <p className="text-sm text-gray-500">
-            Exclusive access for Ronald, Yoram, Roel, Bram & Andre
+            Exclusieve toegang voor Ronald, Yoram, Roel, Bram & André
           </p>
         </div>
       </div>

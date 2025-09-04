@@ -3,6 +3,7 @@ import TimelineSection from '@/components/sections/TimelineSection'
 import FriendsSection from '@/components/sections/FriendsSection'
 import MapSection from '@/components/sections/MapSection'
 import MemoriesSection from '@/components/sections/MemoriesSection'
+import AccountSection from '@/components/sections/AccountSection'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FriendsSection />
       <MapSection />
       <MemoriesSection />
+      <AccountSection />
       
       <footer className="bg-black text-white py-12 px-6">
         <div className="max-w-4xl mx-auto text-center">

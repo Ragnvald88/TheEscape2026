@@ -48,7 +48,7 @@ export default function AccountSection() {
   }
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="account-section" className="section-padding bg-gray-50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-display font-bold text-gray-900 mb-4">
