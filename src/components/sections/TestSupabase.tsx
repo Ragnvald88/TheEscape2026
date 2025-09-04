@@ -1,20 +1,26 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { AlertCircle, CheckCircle, XCircle } from 'lucide-react'
 
 export default function TestSupabase() {
   const [status, setStatus] = useState<'idle' | 'testing' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+  const [isVisible, setIsVisible] = useState(true)
+
+  useEffect(() => {
+    // Auto-test on load
+    testConnection()
+  }, [])
 
   const testConnection = async () => {
     setStatus('testing')
     setMessage('Supabase connectie testen...')
 
     try {
-      // Check if environment variables are set
-      const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-      const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+      // Check if environment variables are set (Next.js will replace these at build time)
+      const url = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
+      const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
       if (!url || url === 'your_supabase_url_here' || !key || key === 'your_supabase_anon_key_here') {
         setStatus('error')
@@ -32,6 +38,10 @@ export default function TestSupabase() {
       if (response.ok) {
         setStatus('success')
         setMessage('✅ Supabase is correct geconfigureerd en klaar voor gebruik!')
+        // Hide after 3 seconds if successful
+        setTimeout(() => {
+          setIsVisible(false)
+        }, 3000)
       } else {
         setStatus('error')
         setMessage('❌ Supabase credentials zijn ingesteld maar connection faalt. Check je keys.')
@@ -42,8 +52,10 @@ export default function TestSupabase() {
     }
   }
 
+  if (!isVisible) return null
+
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50" data-testid="supabase-status">
       <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm">
         <h3 className="text-sm font-bold mb-2 flex items-center gap-2">
           <AlertCircle className="w-4 h-4" />

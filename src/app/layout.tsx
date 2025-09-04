@@ -16,11 +16,42 @@ export const metadata: Metadata = {
   title: "De Ontsnapping 2026 - Europees Avontuur",
   description: "5 vrienden stemmen op Europese bestemmingen voor juni 2026 vakantie. Van Springsteen concerten naar nieuwe horizonten!",
   keywords: ["reizen", "europa", "vakantie", "vrienden", "2026", "avontuur", "nederland", "springsteen"],
+  authors: [{ name: "The Escape Crew" }],
+  creator: "Ronald & Friends",
+  publisher: "TheEscape2026",
+  metadataBase: new URL("https://theescape2026.nl"),
   openGraph: {
     title: "De Ontsnapping 2026",
     description: "5 vrienden, 1 epische Europese reis, ontelbare herinneringen",
     type: "website",
     url: "https://theescape2026.nl",
+    siteName: "De Ontsnapping 2026",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "De Ontsnapping 2026 - Europees Avontuur",
+      },
+    ],
+    locale: "nl_NL",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "De Ontsnapping 2026",
+    description: "5 vrienden op Europees avontuur in juni 2026",
+    images: ["/og-image.jpg"],
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  themeColor: "#000000",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 

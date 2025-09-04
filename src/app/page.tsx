@@ -7,6 +7,7 @@ import MemoriesSection from '@/components/sections/MemoriesSection'
 import StoriesSection from '@/components/sections/StoriesSection'
 import AccountSection from '@/components/sections/AccountSection'
 import TestSupabase from '@/components/sections/TestSupabase'
+import ErrorBoundary from '@/components/ErrorBoundary'
 
 export default function Home() {
   return (
@@ -14,27 +15,41 @@ export default function Home() {
       <Navigation />
       <TestSupabase />
       <main className="min-h-screen">
-        <div id="hero">
-          <HeroSection />
-        </div>
-        <div id="timeline">
-          <TimelineSection />
-        </div>
-        <div id="friends">
-          <FriendsSection />
-        </div>
-        <div id="map">
-          <MapSection />
-        </div>
-        <div id="memories">
-          <MemoriesSection />
-        </div>
-        <div id="stories">
-          <StoriesSection />
-        </div>
-        <div id="account">
-          <AccountSection />
-        </div>
+        <ErrorBoundary>
+          <div id="hero">
+            <HeroSection />
+          </div>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div id="timeline">
+            <TimelineSection />
+          </div>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div id="friends">
+            <FriendsSection />
+          </div>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div id="map">
+            <MapSection />
+          </div>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div id="memories">
+            <MemoriesSection />
+          </div>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div id="stories">
+            <StoriesSection />
+          </div>
+        </ErrorBoundary>
+        <ErrorBoundary>
+          <div id="account">
+            <AccountSection />
+          </div>
+        </ErrorBoundary>
         
         <footer className="bg-black text-white py-12 px-6">
           <div className="max-w-4xl mx-auto text-center">

@@ -77,8 +77,8 @@ export default function HeroSection() {
 
       <div className="relative z-10 text-center max-w-6xl mx-auto">
         {/* Journey Progress */}
-        <div className="mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium">
+        <div className="mb-8 overflow-x-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium whitespace-nowrap">
             <span className="text-green-400">Dublin 2023</span>
             <span className="text-xs">🎸 Springsteen</span>
             <span className="opacity-40">→</span>
