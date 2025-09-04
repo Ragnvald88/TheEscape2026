@@ -38,6 +38,7 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
     "@tailwindcss/postcss": "^4",
     "@types/leaflet": "^1.9.20",
     "@types/node": "^20",
