@@ -4,11 +4,11 @@ import { User } from 'lucide-react'
 
 export default function FriendsSection() {
   const friends = [
-    { name: 'Ronald', role: 'The Leader', color: 'from-blue-400 to-blue-600' },
-    { name: 'Yoram', role: 'The Connoisseur', color: 'from-green-400 to-green-600' },
-    { name: 'Roel', role: 'The Grote Beer', color: 'from-purple-400 to-purple-600' },
-    { name: 'Bram', role: 'The Acid Cowboy', color: 'from-orange-400 to-orange-600' },
-    { name: 'Andre', role: 'The Playfull Daddy', color: 'from-red-400 to-red-600' }
+    { name: 'Ronald', role: 'De Held', subtitle: 'Prato tickets fixer', color: 'from-blue-400 to-blue-600' },
+    { name: 'Yoram', role: 'De Kenner', subtitle: 'Cultuur specialist', color: 'from-green-400 to-green-600' },
+    { name: 'Roel', role: 'De Grote Beer', subtitle: 'Feestbeest', color: 'from-purple-400 to-purple-600' },
+    { name: 'Bram', role: 'De Acid Cowboy', subtitle: 'Avonturier', color: 'from-orange-400 to-orange-600' },
+    { name: 'André', role: 'De Speelse Papa', subtitle: 'Groepsverbinder', color: 'from-red-400 to-red-600' }
   ]
 
   return (
@@ -16,10 +16,10 @@ export default function FriendsSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display font-bold text-gray-900 mb-4">
-            The Crew
+            De Bemanning
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Five friends, five votes, one unforgettable adventure
+            Vijf vrienden, vijf stemmen, één onvergetelijk avontuur
           </p>
         </div>
 
@@ -38,16 +38,19 @@ export default function FriendsSection() {
                 </div>
               </div>
               <h3 className="text-lg font-bold text-gray-900">{friend.name}</h3>
-              <p className="text-sm text-gray-500">{friend.role}</p>
+              <p className="text-sm text-gray-700 font-medium">{friend.role}</p>
+              {friend.subtitle && (
+                <p className="text-xs text-gray-500 mt-1">{friend.subtitle}</p>
+              )}
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
           <div className="inline-block bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Equal Voting Power</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Gelijke Stemkracht</h3>
             <p className="text-gray-600 mb-4">
-              Every friend has one vote. The majority decides our destination.
+              Iedere vriend heeft één stem. De meerderheid bepaalt onze bestemming.
             </p>
             <div className="flex justify-center gap-2">
               {[...Array(5)].map((_, i) => (

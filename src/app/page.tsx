@@ -17,9 +17,12 @@ export default function Home() {
       
       <footer className="bg-black text-white py-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-bold mb-2">The Escape 2026</h3>
+          <h3 className="text-2xl font-bold mb-2">De Ontsnapping 2026</h3>
           <p className="text-gray-400 text-sm">
-            An exclusive adventure for Ronald, Yoram, Roel, Bram & Andre
+            Een exclusief avontuur voor Ronald, Yoram, Roel, Bram & André
+          </p>
+          <p className="text-xs text-gray-500 mt-4">
+            Tramps like us.. baby we were born to run! 🌍
           </p>
         </div>
       </footer>

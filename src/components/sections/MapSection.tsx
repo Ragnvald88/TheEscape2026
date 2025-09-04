@@ -19,10 +19,10 @@ export default function MapSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-display font-bold text-gray-900 mb-4">
-            Where Next?
+            Waar Nu Heen?
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            From Dublin's pubs to Genua's coast to Milan's stadium. The map awaits our next pin.
+            Van Dublin's pubs naar Genua's kust naar Milaan's San Siro. De kaart wacht op onze volgende pin.
           </p>
         </div>
 
@@ -35,11 +35,11 @@ export default function MapSection() {
             <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
               <div className="w-3 h-3 bg-white rounded-full" />
             </div>
-            <span className="text-gray-700 font-medium">Visited</span>
+            <span className="text-gray-700 font-medium">Bezocht</span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-6 h-6 bg-white border-2 border-black rounded-full" />
-            <span className="text-gray-700 font-medium">Potential Destinations</span>
+            <span className="text-gray-700 font-medium">Mogelijke Bestemmingen</span>
           </div>
         </div>
       </div>

@@ -5,30 +5,30 @@ import { Calendar, Gamepad2, Trophy, Plane } from 'lucide-react'
 export default function TimelineSection() {
   const timeline = [
     {
-      date: 'Oct 1-7, 2025',
-      title: 'Date Selection',
-      description: 'Vote for your preferred travel dates in June 2026',
+      date: '1-7 Oktober 2025',
+      title: 'Datum Selectie',
+      description: 'Stem op jullie favoriete reisdatum in juni 2026',
       icon: Calendar,
       color: 'bg-blue-500'
     },
     {
-      date: 'Oct 8 - Nov 4, 2025',
-      title: 'Destination Game',
-      description: '4 weeks of interactive voting battles',
+      date: '8 Okt - 4 Nov 2025',
+      title: 'Bestemming Battle',
+      description: '4 weken interactieve stemrondes',
       icon: Gamepad2,
       color: 'bg-purple-500'
     },
     {
-      date: 'Nov 4, 2025',
-      title: 'The Big Reveal',
-      description: 'Winner announced & bookings begin',
+      date: '4 November 2025',
+      title: 'De Grote Onthulling',
+      description: 'Winnaar bekend & boekingen beginnen',
       icon: Trophy,
       color: 'bg-green-500'
     },
     {
-      date: 'June 2026',
-      title: 'The Escape',
-      description: 'Our adventure begins',
+      date: 'Juni 2026',
+      title: 'De Ontsnapping',
+      description: 'Ons avontuur begint',
       icon: Plane,
       color: 'bg-orange-500'
     }
@@ -39,10 +39,10 @@ export default function TimelineSection() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-display font-bold text-gray-900 mb-4">
-            The Journey Ahead
+            De Reis Voor Ons
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            A carefully orchestrated process to democratically choose our next adventure
+            Een zorgvuldig georganiseerd proces om democratisch onze volgende bestemming te kiezen
           </p>
         </div>
 
