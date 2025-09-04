@@ -6,11 +6,13 @@ import MapSection from '@/components/sections/MapSection'
 import MemoriesSection from '@/components/sections/MemoriesSection'
 import StoriesSection from '@/components/sections/StoriesSection'
 import AccountSection from '@/components/sections/AccountSection'
+import TestSupabase from '@/components/sections/TestSupabase'
 
 export default function Home() {
   return (
     <>
       <Navigation />
+      <TestSupabase />
       <main className="min-h-screen">
         <div id="hero">
           <HeroSection />

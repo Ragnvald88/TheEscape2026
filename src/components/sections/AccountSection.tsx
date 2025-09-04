@@ -28,23 +28,51 @@ export default function AccountSection() {
         setError('Alleen de originele 5 vrienden kunnen registreren')
         return
       }
+
+      try {
+        // Call the registration API
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            password,
+            name
+          })
+        })
+
+        const data = await response.json()
+
+        if (!response.ok) {
+          setError(data.error || 'Registratie mislukt')
+          return
+        }
+
+        setIsSubmitted(true)
+        
+        // Keep success message visible longer for registration
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setEmail('')
+          setPassword('')
+          setName('')
+        }, 5000)
+
+      } catch (err) {
+        setError('Er ging iets mis. Probeer het later opnieuw.')
+        console.error('Registration error:', err)
+      }
     } else {
+      // Login logic (not implemented yet)
       if (!email || !password) {
         setError('Vul je email en wachtwoord in')
         return
       }
+      
+      setError('Login komt binnenkort beschikbaar!')
     }
-
-    // For now, just show success - will integrate with Supabase later
-    setIsSubmitted(true)
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setEmail('')
-      setPassword('')
-      setName('')
-    }, 3000)
   }
 
   return (
@@ -206,12 +234,19 @@ export default function AccountSection() {
                 <h4 className="text-xl font-bold mb-2">
                   {mode === 'register' ? 'Account Aangemaakt!' : 'Welkom Terug!'}
                 </h4>
-                <p className="text-gray-400">
+                <p className="text-gray-400 mb-3">
                   {mode === 'register' 
-                    ? "Je bent klaar voor 1 oktober"
+                    ? "Check je email voor de verificatie link!"
                     : 'Doorverwijzen naar je dashboard...'
                   }
                 </p>
+                {mode === 'register' && (
+                  <div className="text-xs text-gray-500 space-y-1">
+                    <p>📧 Verificatie email verzonden</p>
+                    <p>📬 Ronald krijgt een notificatie op ronaldhoogenberg@hotmail.com</p>
+                    <p>✅ Je bent klaar voor 1 oktober!</p>
+                  </div>
+                )}
               </div>
             )}
           </div>
